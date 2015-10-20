@@ -15,7 +15,7 @@ public class Task {
     private Long id;
 
     @Column(name = "title")
-    private String title;
+    private String name;
 
     @Column(name = "description")
     private String description;
@@ -37,12 +37,12 @@ public class Task {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDescription() {
