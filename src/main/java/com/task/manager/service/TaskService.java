@@ -5,6 +5,8 @@ import com.task.manager.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by Navkrishna on 21/10/15
  */
@@ -18,12 +20,16 @@ public class TaskService {
         return taskRepository.save(task);
     }
 
-    public Object listAll() {
-        return taskRepository.findAll();
+    public List<Task> listAll() {
+        return (List<Task>) taskRepository.findAll();
     }
 
-    public Object getTaskById(Long id) {
-        return taskRepository.findOne(id);
+    public Task getTaskById(Long id) {
+        return (Task) taskRepository.findOne(id);
+    }
+
+    public List<Task> getTaskByName(String name) {
+        return (List<Task>) taskRepository.findAllByName(name);
     }
 
 }
