@@ -21,8 +21,8 @@ public class TaskController {
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     public Task createTask(@RequestBody Task task) {
         Date today = new Date();
-        task.setDateCreated(today);
-        task.setLastUpdated(today);
+        task.setDateCreated(""+today);
+        task.setLastUpdated(""+today);
         return taskService.add(task);
     }
 

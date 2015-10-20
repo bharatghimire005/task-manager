@@ -21,10 +21,10 @@ public class Task {
     private String description;
 
     @Column(name = "date_created")
-    private Date dateCreated;
+    private String dateCreated;
 
     @Column(name = "last_updated")
-    private Date lastUpdated;
+    private String lastUpdated;
 
     @Column(name = "created_by")
     private Long createdBy;
@@ -53,19 +53,19 @@ public class Task {
         this.description = description;
     }
 
-    public Date getDateCreated() {
+    public String getDateCreated() {
         return dateCreated;
     }
 
-    public void setDateCreated(Date dateCreated) {
+    public void setDateCreated(String dateCreated) {
         this.dateCreated = dateCreated;
     }
 
-    public Date getLastUpdated() {
+    public String getLastUpdated() {
         return lastUpdated;
     }
 
-    public void setLastUpdated(Date lastUpdated) {
+    public void setLastUpdated(String lastUpdated) {
         this.lastUpdated = lastUpdated;
     }
 
