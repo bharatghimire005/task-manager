@@ -18,10 +18,13 @@ public class Task {
     @Column(name = "description")
     private String description;
 
-    @Column(name = "createdOn")
-    private Date createdOn;
+    @Column(name = "date_created")
+    private Date dateCreated;
 
-    @Column(name = "createdBy")
+    @Column(name = "last_updated")
+    private Date lastUpdated;
+
+    @Column(name = "created_by")
     private Long createdBy;
 
 
