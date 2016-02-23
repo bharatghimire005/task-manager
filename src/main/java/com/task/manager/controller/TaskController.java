@@ -36,4 +36,9 @@ public class TaskController {
         return taskService.getTaskByName(name);
     }
 
+    @RequestMapping(value = "/findById", method = RequestMethod.GET)
+    public Task findById(Long id) {
+        return taskService.getTaskById(id);
+    }
+
 }
