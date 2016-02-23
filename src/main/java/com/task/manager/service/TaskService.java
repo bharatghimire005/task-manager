@@ -29,7 +29,7 @@ public class TaskService {
     }
 
     public List<Task> getTaskByName(String name) {
-        return (List<Task>) taskRepository.findAllByName(name);
+        return taskRepository.findAllByName(name);
     }
 
 }
